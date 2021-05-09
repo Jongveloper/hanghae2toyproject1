@@ -1,0 +1,73 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.login-box {
+    /*background-color: #9AECDB;*/
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 20vh;
+    padding-top: 15vh;
+
+    border: #CAD3C8 solid 2px;
+    border-radius: 10px;
+}
+
+.id-box, .pw-box {
+    width: 280px;
+    margin: auto;
+    margin-top: -20px;
+    padding-bottom: 45px;
+}
+
+.input-group input {
+    border: #CAD3C8 solid 1px;
+    background: transparent;
+}
+
+.input-group input:focus {
+    background: transparent;
+}
+
+.input-group span {
+    color: black;
+    border: none;
+    background: transparent;
+}
+
+.btn-wrap {
+    /*background-color: red;*/
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    border: #CAD3C8 solid 1px;
+    border-radius: 15px;
+    background: transparent;
+    color: black;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: black;
+    border: black solid 1px;
+}
+
+.btn:focus {
+    background-color: transparent;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    z-index: -100;
+    overflow: hidden;
+}
+
