@@ -18,42 +18,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/login.css">
 </head>
 <style>
-    .login-box {
-        width: 400px;
-        height: 400px;
-        /*background-color: green;*/
-        margin: auto;
-        margin-top: 20vh;
-        padding-top: 15vh;
-        border: 1px solid black;
-    }
 
-    .id-box {
-        width: 270px;
-        margin: auto;
-    }
-
-    .pw-box {
-        width: 270px;
-        margin: auto;
-    }
-    .login-btn{
-        display: block;
-        margin: auto;
-        margin-left: 85px;
-        margin-top: 50px;
-    }
-    .signup-btn{
-        display: block;
-        margin: auto;
-        margin-top: -38px;
-        margin-right: 85px;
-    }
 </style>
 
 <body>
+    <div id="video">
+        <video autoplay loop muted width="100%" height="100%">
+            <source src="../static/ocean.mp4" type="video/mp4">
+        </video>
+    </div>
     <div class="login-box"> <!-- login박스-->
         <div class="input-group mb-3 id-box">
             <span class="input-group-text" id="id-box">ID</span>
@@ -62,12 +38,13 @@
         </div><!--아이디입력-->
         <div class="input-group mb-3 pw-box">
             <span class="input-group-text" id="basic-addon1">PW</span>
-            <input type="text" class="form-control" placeholder="비밀번호를 입력해주세요" aria-label="User-password"
+            <input style="margin-left: -8px" type="text" class="form-control" placeholder="비밀번호를 입력해주세요" aria-label="User-password"
                    aria-describedby="basic-addon1">
         </div><!--비밀번호입력-->
-        <button type="button" class="btn btn-primary login-btn">로그인하기</button><!--로그인 버튼-->
-        <button type="button" class="btn btn-primary signup-btn">회원가입</button><!--회원가입 버튼-->
-
+        <div class="btn-wrap">
+            <button type="submit" class="btn btn-primary login-btn">로그인하기</button><!--로그인 버튼-->
+            <button type="submit" class="btn btn-primary signup-btn">회원가입</button><!--회원가입 버튼-->
+        </div>
     </div>
 </body>
 </html>
