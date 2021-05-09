@@ -1,10 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .wrap{
+            width: 400px;
+            margin: auto;
+            margin-top: 15vh;
+        }
+        .mb-3{
+            margin-top: 2.5vh;
+        }
+        .signup-btn{
+            width: 190px;
+            display: block;
+            margin: auto;
+            margin-top: 2.5vh;
+        }
+    </style>
 </head>
 <body>
-
+<div>로고를 넣을 곳</div>
+<hr>
+<div class="wrap">
+    <h1 style="text-align: center">회원가입</h1>
+    <div class="input-group mb-3 name-box">
+            <span class="input-group-text" id="name-box">이름</span>
+            <input type="text" class="form-control" placeholder="이름을 입력해주세요." aria-label="User-name"
+                   aria-describedby="basic-addon1">
+        </div><!--이름입력창-->
+    <div class="input-group mb-3 id-box">
+            <span class="input-group-text" id="id-box">아이디</span>
+            <input type="text" class="form-control" placeholder="아이디를 입력해주세요." aria-label="User-name"
+                   aria-describedby="basic-addon1">
+        </div><!--아이디입력창-->
+    <div class="input-group mb-3 pw-box">
+            <span class="input-group-text" id="pw-box">비밀번호</span>
+            <input type="password" class="form-control" placeholder="비밀번호를 입력해주세요." aria-label="User-name"
+                   aria-describedby="basic-addon1">
+        </div><!--비밀번호입력창-->
+    <div class="input-group mb-3 rpw-box">
+            <span class="input-group-text" id="rpw-box">비밀번호확인</span>
+            <input type="password" class="form-control" placeholder="아이디를 입력해주세요." aria-label="User-name"
+                   aria-describedby="basic-addon1">
+        </div><!--비밀번호확인입력창-->
+    <button type="button" class="btn btn-primary signup-btn">가입하기</button><!--가입하기버튼-->
+</div> <!--회원가입 폼-->
+<hr>
 </body>
 </html>
