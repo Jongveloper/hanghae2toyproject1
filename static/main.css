@@ -1,0 +1,76 @@
+* {
+    font-family: 'Gamja Flower', cursive;
+}
+
+#logo {
+    width: 200px;
+    height: 80px;
+    margin: 30px auto auto 20px;
+}
+
+.btn-login-out {
+    float: right;
+    background-color: #7ed6df;
+    border: none;
+    width: 100px;
+    height: 25px;
+    line-height: 10px;
+    margin: 10px 10px auto auto;
+    color: black;
+}
+
+.btn-login-out:hover {
+    background-color: #34ace0;
+    color: black;
+}
+
+.top_title {
+    float: right;
+    margin: 30px 40px auto auto;
+    font-size: 40px;
+    line-height: 90px;
+}
+
+.menu {
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.nav-link {
+    color: black;
+    background-color: #7ed6df;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+    color: white;
+}
+
+.bodytable {
+    width: 1400px;
+    margin: auto;
+}
+
+.guide {
+    background-color: #7ed6df;
+    width: 400px;
+    height: 200px;
+    margin-top: 30px;
+    padding: 50px;
+}
+
+.bloglink {
+    background-color: #7ed6df;
+    width: 400px;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.calendar {
+    position: absolute;
+    width: 960px;
+    height: 655px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: #7ed6df;
+}
