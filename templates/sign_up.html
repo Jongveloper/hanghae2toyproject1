@@ -22,11 +22,6 @@
     <title>회원가입 페이지</title>
 
     <link rel="stylesheet" href="../static/sign_up.css">
-
-    <style>
-
-    </style>
-
 </head>
 <body>
 <div class="logo-box">
@@ -35,30 +30,32 @@
     </a>
 </div>
 <hr class="line">
-<div class="wrap">
-    <h1 style="text-align: center">회원가입</h1>
-    <div class="input-group mb-3 name-box">
-            <span class="input-group-text" id="name-box">이름</span>
-            <input style="margin-left: 30px" type="text" class="form-control" placeholder="이름을 입력해주세요." aria-label="User-name"
-                   aria-describedby="basic-addon1">
-    </div><!--이름입력창-->
-    <div class="input-group mb-3 id-box">
-            <span class="input-group-text" id="id-box">아이디</span>
-            <input style="margin-left: 15px" type="text" class="form-control" placeholder="아이디를 입력해주세요." aria-label="User-name"
-                   aria-describedby="basic-addon1">
-        </div><!--아이디입력창-->
-    <div class="input-group mb-3 pw-box">
-            <span class="input-group-text" id="pw-box">비밀번호</span>
-            <input style="margin-left: 3px" type="password" class="form-control" placeholder="비밀번호를 입력해주세요." aria-label="User-name"
-                   aria-describedby="basic-addon1">
-        </div><!--비밀번호입력창-->
-    <div class="input-group mb-3 rpw-box">
-            <span class="input-group-text" id="rpw-box">비밀번호확인</span>
-            <input style="margin-left: -25px" type="password" class="form-control" placeholder="아이디를 입력해주세요." aria-label="User-name"
-                   aria-describedby="basic-addon1">
-    </div><!--비밀번호확인입력창-->
-    <button type="button" class="btn btn-primary signup-btn">가입하기</button><!--가입하기버튼-->
-</div> <!--회원가입 폼-->
+    <form method="post" id="signup-form">
+        <div class="wrap">
+            <h1 style="text-align: center">회원가입</h1>
+            <div class="input-group mb-3 name-box">
+                    <span class="input-group-text" id="name-box">이름</span>
+                    <input style="margin-left: 30px" type="text" name="username" class="form-control" placeholder="이름을 입력해주세요." aria-label="User-name"
+                           aria-describedby="basic-addon1">
+            </div><!--이름입력창-->
+            <div class="input-group mb-3 id-box">
+                    <span class="input-group-text" id="id-box">아이디</span>
+                    <input style="margin-left: 15px" type="text" name="userid" class="form-control" placeholder="아이디를 입력해주세요." aria-label="User-name"
+                           aria-describedby="basic-addon1">
+                </div><!--아이디입력창-->
+            <div class="input-group mb-3 pw-box">
+                    <span class="input-group-text" id="pw-box">비밀번호</span>
+                    <input style="margin-left: 3px" type="password" name="password" class="form-control" placeholder="비밀번호를 입력해주세요." aria-label="User-name"
+                           aria-describedby="basic-addon1">
+                </div><!--비밀번호입력창-->
+            <div class="input-group mb-3 rpw-box">
+                    <span class="input-group-text" id="rpw-box">비밀번호확인</span>
+                    <input style="margin-left: -25px" type="password" name="re_password" class="form-control" placeholder="아이디를 입력해주세요." aria-label="User-name"
+                           aria-describedby="basic-addon1">
+            </div><!--비밀번호확인입력창-->
+            <button type="submit" class="btn btn-primary signup-btn">가입하기</button><!--가입하기버튼-->
+        </div> <!--회원가입 폼-->
+    </form>
 <div class="bottom-color">
     <hr class="line">
 </div>
