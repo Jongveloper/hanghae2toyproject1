@@ -2,6 +2,10 @@
     font-family: 'Gamja Flower', cursive;
 }
 
+.wrap {
+    width: 1440px;
+    margin: auto;
+}
 #logo {
     width: 200px;
     height: 80px;
