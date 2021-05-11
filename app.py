@@ -11,23 +11,25 @@ def login():
     return render_template('login.html')
 
 #회원가입 구현
+app.config["SECRET_KEY"] = "hanghaehae"
 @app.route('/register',methods=['GET','POST'])
 def register():
     if request.method == 'GET':
         return render_template("sign_up.html")
     else:
-        username = request.form.get('username')
-        userid = request.form.get('userid')
-        password = request.form.get('password')
-        re_password = request.form.get('re_password')
+        username = request.form['username']
+        userid = request.form['userid']
+        password = request.form['password']
+        re_password = request.form['re_password']
 
         doc = {'user_id': userid, 'user_name': username, 'user_pw': password}
 
-        if not (username and userid and password and re_password):
-            # flash("모두 입력해주세요!")
+        if username == '' or userid == '' or password == '' or re_password == '':
+            flash('모두 입력해주세요.')
             return render_template("sign_up.html")
-        elif password != re_password: # 비밀번호가 일치하지않을 때
-            # flash("비밀번호가 일치하지 않습니다!")
+
+        if password != re_password: # 비밀번호가 일치하지않을 때
+            flash('비밀번호가 일치하지 않습니다.')
             return render_template("sign_up.html")
         else:
             db.hht1users.insert_one(doc)
