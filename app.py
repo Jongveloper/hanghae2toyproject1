@@ -35,6 +35,26 @@ def register():
             db.hht1users.insert_one(doc)
             return redirect(url_for('login'))
 
+#종혁님 개인 페이지
+@app.route('/jonghyuk')
+def jonghyuk():
+    return render_template('jonghyuk.html')
+
+#선민님 개인 페이지
+@app.route('/seonmin')
+def seonmin():
+    return render_template('seonmin.html')
+
+#재인님 개인 페이지
+@app.route('/jaein')
+def jaein():
+    return render_template('jaein.html')
+
+#나영님 개인 페이지
+@app.route('/nayeong')
+def nayeong():
+    return render_template('nayeong.html')
+
 
 
 if __name__ == '__main__':

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <title>항해 2기 사전 스터디 2조 토이프로젝트</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <script>
+        function write() {
+            let texts = $('#floatingTextarea2').val();
+            let temp_html = `<li>${texts}</li>`
+                $('#temp-write').append(temp_html)
+
+        }
+    </script>
+
+</head>
+<body class="wrap">
+<div>
+    <button type="button" class="btn btn-primary signup-btn btn-login-out">로그아웃</button>
+    <div>
+        <a href="login.html">
+            <img id="logo" src="../static/logo.jpeg">
+        </a>
+        <span class="top_title">항해 2기 사전 스터디 2조 토이프로젝트
+    </div>
+    <div class="menu">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="main.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">우종혁</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">이선민</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">주재인</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">김나영</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">공부방</a>
+            </li>
+            <!--            <li class="nav-item">-->
+            <!--                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+            <!--            </li>-->
+        </ul>
+    </div>
+</div>
+<div>
+    <table>
+        <tr>
+            <td>
+                <div class="aboutme-img"></div>
+                <p class="aboutme-text">개인 소개는 자유롭게 작성해주시고 작성한 내용의 양에 따 스타일시트에서 크기 조정하여 사용해주세요!<br> 위 이미지는 스타일 시트에 위치
+                    주석처리해두었고 해당 주석에서 url만 수정해주시면 됩니다! 크기 조정이 어려워 css로 뺐어요!</p>
+            </td>
+        </tr>
+        <tr rowspan="2">
+            <div class="card-group">
+                <div class="card">
+                    <img src="https://cdn.edujin.co.kr/news/photo/202009/33808_62349_4311.jpg"
+                         class="card-img-top cardimg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" style="color:black; text-decoration: underline">좋아하는 것들로 자유롭게
+                            작성!</a></h5>
+                        <p class="card-text">취미로 즐기는 운동들</p>
+                        <p class="card-text"><small class="text-muted">#축구 #농구 #자전거</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="http://www.normarestaurant.com/wp-content/uploads/2018/05/press_themichelineguide_logo.jpg"
+                         class="card-img-top cardimg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" style="color:black; text-decoration: underline">좋아하는 것들로 자유롭게
+                            작성!</a></h5>
+                        <p class="card-text">자주가는 맛집들</p>
+                        <p class="card-text"><small class="text-muted">#신촌 #홍대</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://www.enjoyillinois.com/assets/Tourism-Operators/images/Staunton-Country-Classic-Cars-Route-66-10.25.18-058-resized.jpg"
+                         class="card-img-top cardimg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#" style="color:black; text-decoration: underline">좋아하는 것들로 자유롭게
+                            작성!</a></h5>
+                        <p class="card-text">덕질 중인 것들 혹은 나의 관심분야에 대해서</p>
+                        <p class="card-text"><small class="text-muted">#자동차 #영화</small></p>
+                    </div>
+                </div>
+            </div>
+        </tr>
+    </table>
+    <div>
+        <div class="writememo">
+            <div class="form-floating">
+                <label for="floatingTextarea2">메모장</label>
+                <textarea class="form-control" placeholder="공부 기록 또는 개발 프로젝트 외 여러가지 메모하기"
+                          id="floatingTextarea2"
+                          style="height: 150px"></textarea>
+            </div>
+            <button type="button" onclick="write()" class="btn btn-primary btn-memo">작성완료</button>
+            <hr>
+        </div>
+        <ul id="temp-write">
+            <li>12123</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
