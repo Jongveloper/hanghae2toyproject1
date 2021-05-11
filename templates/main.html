@@ -25,10 +25,16 @@
 
     <link rel="stylesheet" type="text/css" href="../static/main.css">
 
+    <script>
+        function logout() {
+            location.href="login.html";
+        }
+    </script>
+
 </head>
 <body class="wrap">
 <div>
-    <button type="button" class="btn btn-primary signup-btn btn-login-out">로그아웃</button>
+    <button type="button" class="btn btn-primary signup-btn btn-login-out" onclick="logout()">로그아웃</button>
     <div>
         <a href="login.html">
             <img id="logo" src="../static/logo.jpeg">
