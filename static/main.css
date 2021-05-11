@@ -51,6 +51,7 @@
 }
 
 .bodytable {
+    display: grid;
     width: 1400px;
     margin: auto;
 }
@@ -66,15 +67,14 @@
 .bloglink {
     background-color: #7ed6df;
     width: 400px;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 20px;
 }
 
 .calendar {
-    position: absolute;
+    float: right;
     width: 960px;
     height: 655px;
     margin-top: 30px;
-    margin-left: 30px;
     background-color: #7ed6df;
 }
