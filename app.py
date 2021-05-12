@@ -55,22 +55,22 @@ def register():
 #종혁님 개인 페이지
 @app.route('/jonghyuk')
 def jonghyuk():
-    return render_template('jonghyuk.html')
+    return render_template('jh/jonghyuk.html')
 
 #선민님 개인 페이지
 @app.route('/seonmin')
 def seonmin():
-    return render_template('seonmin.html')
+    return render_template('sm/seonmin.html')
 
 #재인님 개인 페이지
 @app.route('/jaein')
 def jaein():
-    return render_template('jaein.html')
+    return render_template('ji/jaein.html')
 
 #나영님 개인 페이지
 @app.route('/nayeong')
 def nayeong():
-    return render_template('nayeong.html')
+    return render_template('ny/nayeong.html')
 
 
 
