@@ -1,0 +1,161 @@
+/* 전체 폰트 */
+* {
+    font-family: 'Gamja Flower', cursive;
+}
+
+/* 화면 해상도에 따른 레이아웃 크기 조정 */
+.wrap {
+    width: 1440px;
+    margin: auto;
+}
+
+/* header - 로고 */
+#logo {
+    width: 200px;
+    height: 80px;
+    margin: 30px auto auto 20px;
+}
+
+/* header - 로그아웃 버튼 */
+.btn-login-out {
+    float: right;
+    background-color: #7ed6df;
+    border: none;
+    width: 100px;
+    height: 25px;
+    line-height: 10px;
+    margin: 10px 10px auto auto;
+    color: black;
+}
+
+.btn-login-out:hover {
+    background-color: #34ace0;
+    color: black;
+}
+
+/* header - 항해 2기 사전 스터디 2조 토이프로젝트 */
+.top_title {
+    float: right;
+    margin: 30px 40px auto auto;
+    font-size: 40px;
+    line-height: 90px;
+}
+
+/* body - 메인+개인 페이지 nav */
+.menu {
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.nav-link {
+    color: black;
+    background-color: #7ed6df;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+    color: white;
+}
+
+/* body - 메인 페이지 내용 */
+.bodytable {
+    display: grid;
+    width: 1400px;
+    margin: auto;
+}
+
+.guide {
+    background-color: #7ed6df;
+    width: 400px;
+    height: 200px;
+    margin-top: 30px;
+    padding: 50px;
+}
+
+.bloglink {
+    background-color: #7ed6df;
+    width: 400px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.calendar {
+    float: right;
+    width: 960px;
+    height: 655px;
+    margin-top: 30px;
+    background-color: #7ed6df;
+}
+
+/* body - 개인 페이지 내용 */
+.aboutme-img {
+    text-align: center;
+    width: 400px;
+    height: 350px;
+    padding-top: 20px;
+    margin: 20px 0px auto 10px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutme-text {
+    float: right;
+    width: 1000px;
+    height: 330px;
+    padding: 50px;
+    border: #7ed6df solid 5px;
+    margin: 40px 10px auto 0px;
+}
+
+.flex_box {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.favorite {
+    border-radius: 50%;
+    border: none;
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+}
+
+.btn-favorite {
+    background-color: white;
+}
+
+.writememo {
+    width: 1420px;
+    height: 300px;
+    margin: auto;
+    border: 5px #7ed6df solid;
+    border-bottom: none;
+    padding: 30px;
+}
+
+#floatingTextarea2 {
+    background-color: #7ed6df;
+}
+
+.btn-memo {
+    background-color: #7ed6df;
+    border: none;
+    color: black;
+    display: block;
+    margin: 20px auto auto auto;
+}
+
+.btn-memo:hover {
+    background-color: #34ace0;
+    color: black;
+}
+
+#temp-write {
+    display: block;
+    width: 1420px;
+    border: 5px #7ed6df solid;
+    border-top: none;
+    margin: auto;
+}
