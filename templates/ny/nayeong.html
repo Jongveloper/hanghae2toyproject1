@@ -35,6 +35,18 @@
         function logout() {
             location.href = "/";
         }
+
+        function first_favorite() {
+            location.href = "/nayeong_cat";
+        }
+
+        function second_favorite() {
+            location.href = "/nayeong_workout";
+        }
+
+        function third_favorite() {
+            location.href = "/nayeong_travel";
+        }
     </script>
 
 </head>
@@ -86,9 +98,9 @@
     </div>
     <p style="font-weight: bold; text-align: center; font-size: 30px; margin: 20px auto">>>Interest<<</p>
     <div class="flex_box">
-        <button type="button" class="btn btn-favorite"><img src="../../static/favorite_ny/cat.JPG" class="favorite"></button>
-        <button type="button" class="btn btn-favorite"><img src="../../static/favorite_ny/yoga.JPG" class="favorite"></button>
-        <button type="button" class="btn btn-favorite"><img src="../../static/favorite_ny/travel.JPG" class="favorite"></button>
+        <button type="button" class="btn btn-favorite"><img src="../../static/favorite_ny/cat.JPG" class="favorite" onclick="first_favorite()"></button>
+        <button type="button" class="btn btn-favorite"><img src="../../static/favorite_ny/yoga.JPG" class="favorite" onclick="second_favorite()"></button>
+        <button type="button" class="btn btn-favorite"><img src="../../static/favorite_ny/travel.JPG" class="favorite" onclick="third_favorite()"></button>
     </div>
 
     <div>
