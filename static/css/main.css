@@ -91,40 +91,40 @@
 .aboutme-img {
     text-align: center;
     width: 400px;
-    height: 280px;
+    height: 350px;
     padding-top: 20px;
-    margin: 30px auto auto 10px;
+    margin: 20px 0px auto 10px;
 
     background-size: cover;
     background-position: center;
 }
 
 .aboutme-text {
-    background-color: #7ed6df;
-    width: 400px;
-    height: 200px;
-    padding: 20px;
-    margin-left: 10px;
-}
-
-.card-group {
     float: right;
-    text-align: center;
     width: 1000px;
-    height: 480px;
-    margin: 30px 10px auto auto
+    height: 330px;
+    padding: 50px;
+    border: #7ed6df solid 5px;
+    margin: 40px 10px auto 0px;
 }
 
-.cardimg {
-    height: 280px;
+.flex_box {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
 }
 
-.card-body {
+.favorite {
+    border-radius: 50%;
+    border: none;
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
     background-color: #7ed6df;
 }
 
-.text-muted {
-    font-weight: bold;
+.btn-favorite {
+    background-color: white;
 }
 
 .writememo {
