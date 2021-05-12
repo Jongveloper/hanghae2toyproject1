@@ -6,9 +6,25 @@ client = MongoClient('localhost', 27017)
 db = client.dbhanghae2
 
 #처음 페이지(로그인)
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def login():
-    return render_template('login.html')
+    if request.method == 'GET':
+        return render_template('login.html')
+    else:
+        userid = request.form['userid']
+        password = request.form['password']
+        users = db.hht1users.find_one({'user_id': userid, 'user_pw': password})
+        if users is None:
+            #flash("아이디와 비밀번호를 확인해주세요.")
+            return "아이디와 비밀번호를 확인해주세요."
+        else:
+            session['user'] = userid
+            return redirect('main')
+        return redirect('main')
+#메인 페이지
+@app.route('/main')
+def main():
+    return render_template('main.html')
 
 #회원가입 구현
 app.config["SECRET_KEY"] = "hanghaehae"

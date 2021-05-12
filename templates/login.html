@@ -36,21 +36,23 @@
             <source src="../static/vid/ocean.mp4" type="video/mp4">
         </video>
     </div>
-    <div class="login-box"> <!-- login박스-->
-        <div class="input-group mb-3 id-box">
-            <span class="input-group-text" id="id-box">ID</span>
-            <input type="text" class="form-control" placeholder="아이디를 입력해주세요." aria-label="User-name"
-                   aria-describedby="basic-addon1">
-        </div><!--아이디입력-->
-        <div class="input-group mb-3 pw-box">
-            <span class="input-group-text" id="basic-addon1">PW</span>
-            <input style="margin-left: -8px" type="password" class="form-control" placeholder="비밀번호를 입력해주세요"
-                   aria-label="User-password">
-        </div><!--비밀번호입력-->
-        <div class="btn-wrap">
-            <button type="submit" class="btn btn-primary login-btn">로그인하기</button><!--로그인 버튼-->
-            <button onclick= "location.href='/register'" type="submit" class="btn btn-primary signup-btn">회원가입</button><!--회원가입 버튼-->
+    <form method="post" id = "login-form">
+        <div class="login-box"> <!-- login박스-->
+            <div class="input-group mb-3 id-box">
+                <span class="input-group-text" id="id-box">ID</span>
+                <input type="text" class="form-control" name="userid" placeholder="아이디를 입력해주세요." aria-label="User-name"
+                       aria-describedby="basic-addon1">
+            </div><!--아이디입력-->
+            <div class="input-group mb-3 pw-box">
+                <span class="input-group-text" id="basic-addon1">PW</span>
+                <input style="margin-left: -8px" type="password" name="password" class="form-control" placeholder="비밀번호를 입력해주세요"
+                       aria-label="User-password">
+            </div><!--비밀번호입력-->
+            <div class="btn-wrap">
+                <button type="submit" class="btn btn-primary login-btn">로그인하기</button><!--로그인 버튼-->
+                <button onclick= "location.href='/register'" type="button" class="btn btn-primary signup-btn">회원가입</button><!--회원가입 버튼-->
+            </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>
