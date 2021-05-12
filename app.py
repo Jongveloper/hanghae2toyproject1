@@ -72,6 +72,15 @@ def jaein():
 @app.route('/nayeong')
 def nayeong():
     return render_template('ny/nayeong.html')
+@app.route('/nayeong_cat')
+def nayeong_cat():
+    return render_template('ny/cat.html')
+@app.route('/nayeong_workout')
+def nayeong_workout():
+    return render_template('ny/workout.html')
+@app.route('/nayeong_travel')
+def nayeong_travel():
+    return render_template('ny/travel.html')
 
 
 
