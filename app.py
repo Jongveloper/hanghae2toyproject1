@@ -50,7 +50,8 @@ def register():
             return render_template("sign_up.html")
         else:
             db.hht1users.insert_one(doc)
-            return redirect(url_for('login'))
+            flash('회원가입 완료')
+            return render_template("login.html")
 
 #종혁님 개인 페이지
 @app.route('/jonghyuk')
