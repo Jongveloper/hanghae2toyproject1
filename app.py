@@ -21,6 +21,7 @@ def login():
             session['user'] = userid
             return redirect('main')
         return redirect('/')
+
 #메인 페이지
 @app.route('/main')
 def main():
@@ -70,6 +71,7 @@ def jaein():
 @app.route('/nayeong')
 def nayeong():
     return render_template('nayeong.html')
+
 
 
 
