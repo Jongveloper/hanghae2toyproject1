@@ -15,12 +15,12 @@ def login():
         password = request.form['password']
         users = db.hht1users.find_one({'user_id': userid, 'user_pw': password})
         if users is None:
-            #flash("아이디와 비밀번호를 확인해주세요.")
-            return "아이디와 비밀번호를 확인해주세요."
+            flash("아이디와 비밀번호를 확인해주세요.")
+            # return "아이디와 비밀번호를 확인해주세요."
         else:
             session['user'] = userid
             return redirect('main')
-        return redirect('main')
+        return redirect('/')
 #메인 페이지
 @app.route('/main')
 def main():
