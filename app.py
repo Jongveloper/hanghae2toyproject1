@@ -51,7 +51,77 @@ def register():
         else:
             db.hht1users.insert_one(doc)
             flash('회원가입 완료')
-            return render_template("login.html")
+            return redirect('/')
+
+# 메모 구현 (POST API)(종혁)
+@app.route('/memo', methods=['POST'])
+def save_memo():
+    memo = request.form['memo']
+
+    doc = {'memo': memo}
+
+    db.memo.insert_one(doc)
+
+    return jsonify({'msg': '작성하기 완료!'})
+
+# 메모 목록 보기 구현 (GET api)(종혁)
+@app.route('/memo', methods=['GET'])
+def view_memo():
+    view = list(db.memo.find({}, {'_id': False}))
+    return jsonify({'memo': view})
+
+# 메모 구현 (POST API)(재인님)
+@app.route('/jmemo', methods=['POST'])
+def save_jmemo():
+    jmemo = request.form['jmemo']
+
+    doc = {'jmemo': jmemo}
+
+    db.jmemo.insert_one(doc)
+
+    return jsonify({'msg': '작성하기 완료!'})
+
+# 메모 목록 보기 구현 (GET api)(재인님)
+@app.route('/jmemo', methods=['GET'])
+def view_jmemo():
+    view = list(db.jmemo.find({}, {'_id': False}))
+    return jsonify({'jmemo': view})
+
+# 메모 구현 (POST API)(나영님)
+@app.route('/nmemo', methods=['POST'])
+def save_nmemo():
+    nmemo = request.form['nmemo']
+
+    doc = {'nmemo': nmemo}
+
+    db.nmemo.insert_one(doc)
+
+    return jsonify({'msg': '작성하기 완료!'})
+
+
+# 메모 목록 보기 구현 (GET api)(나영님)
+@app.route('/nmemo', methods=['GET'])
+def view_nmemo():
+    view = list(db.nmemo.find({}, {'_id': False}))
+    return jsonify({'nmemo': view})
+
+# 메모 구현 (POST API)(선민님)
+@app.route('/smemo', methods=['POST'])
+def save_smemo():
+    smemo = request.form['smemo']
+
+    doc = {'smemo': smemo}
+
+    db.smemo.insert_one(doc)
+
+    return jsonify({'msg': '작성하기 완료!'})
+
+
+# 메모 목록 보기 구현 (GET api)(선민님)
+@app.route('/smemo', methods=['GET'])
+def view_smemo():
+    view = list(db.smemo.find({}, {'_id': False}))
+    return jsonify({'smemo': view})
 
 #종혁님 개인 페이지
 @app.route('/jonghyuk')
@@ -81,8 +151,6 @@ def nayeong_workout():
 @app.route('/nayeong_travel')
 def nayeong_travel():
     return render_template('ny/travel.html')
-
-
 
 
 if __name__ == '__main__':

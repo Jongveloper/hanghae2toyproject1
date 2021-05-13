@@ -26,11 +26,6 @@
     <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 
     <script>
-        function write() {
-            let texts = $('#floatingTextarea2').val();
-            let temp_html = `<li>${texts}</li>`
-            $('#temp-write').append(temp_html)
-        }
 
         function logout() {
             location.href = "/";
@@ -57,7 +52,7 @@
         <a href="/main">
             <img id="logo" src="../../static/image/logo.jpeg">
         </a>
-        <span class="top_title">항해 2기 사전 스터디 2조 토이프로젝트
+        <span class="top_title">항해 2기 사전 스터디 2조 토이프로젝트 </span>
     </div>
     <div class="menu">
         <ul class="nav nav-tabs">
@@ -106,19 +101,56 @@
     <div>
         <div class="writememo">
             <div class="form-floating">
-                <label for="floatingTextarea2">메모장</label>
+                <label for="memo">메모장</label>
                 <textarea class="form-control" placeholder="공부 기록 또는 개발 프로젝트 외 여러가지 메모하기"
-                          id="floatingTextarea2"
+                          id="memo"
                           style="height: 150px"></textarea>
             </div>
-            <button type="button" onclick="write()" class="btn btn-primary btn-memo">작성완료</button>
+            <button type="button" onclick="memo_comm();" class="btn btn-primary btn-memo">작성완료</button>
             <hr>
         </div>
         <ul id="temp-write">
-            <li>12123</li>
+            <li>메모를 작성하면 아래에 저장됩니다!</li>
         </ul>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        listing();
+    });
 
+    function listing() {
+        $.ajax({
+            type: "GET",
+            url: "/nmemo",
+            data: {},
+            success: function (response) {
+                let memoview = response["nmemo"];
+                for (let i = 0; i < memoview.length; i++) {
+                    let memo = memoview[i]['nmemo'];
+                    let temp_html = `<ul>
+                                        <li>${memo}</li>
+                                     </ul>`
+                    $('#temp-write').append(temp_html)
+                }
+            }
+        })
+
+    }
+
+    function memo_comm() {
+        let memo = $('#memo').val();
+        $.ajax({
+            type: "POST",
+            url: "/nmemo",
+            data: {nmemo: memo},
+            success: function (response) {
+                alert(response['msg'])
+                window.location.reload();
+            }
+        })
+    }
+
+</script>
 </body>
 </html>
