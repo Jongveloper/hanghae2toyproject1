@@ -136,10 +136,6 @@
     padding: 30px;
 }
 
-#floatingTextarea2 {
-    background-color: #7ed6df;
-}
-
 .btn-memo {
     background-color: #7ed6df;
     border: none;
@@ -159,4 +155,8 @@
     border: 5px #7ed6df solid;
     border-top: none;
     margin: auto;
+}
+
+#memo {
+    background-color: #7ed6df;
 }
