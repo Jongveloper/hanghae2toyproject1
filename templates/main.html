@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -24,12 +26,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/calendar.css">
 
     <script>
         function logout() {
             location.href="/";
         }
     </script>
+
 
 </head>
 <body class="wrap">
@@ -70,7 +74,28 @@
 <div>
     <table class="bodytable">
         <tr class="calendar" rowspan="2">
+            <th class="header">
+                <div class="year-month"></div>
+                <td class="nav-box">
+                    <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                    <button class="nav-btn go-today" onclick="goToday()">today</button>
+                    <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+                </td>
+            </th>
+            <th class="main">
+                <td class="days">
+                    <p class="day">일</p>
+                    <p class="day">월</p>
+                    <p class="day">화</p>
+                    <p class="day">수</p>
+                    <p class="day">목</p>
+                    <p class="day">금</p>
+                    <p class="day">토</p>
+                </td>
+                <td class="dates"></td>
+            </th>
         </tr>
+
         <tr>
             <td>
                 <p class="guide">사전스터디 첫 팀 프로젝트!<br>
@@ -91,8 +116,8 @@
                     https://velog.io/@skdud4659<br>깃허브 : </p>
             </td>
         </tr>
-
     </table>
 </div>
+<script type="text/javascript" src="../static/js/calendar.js"></script>
 </body>
 </html>
