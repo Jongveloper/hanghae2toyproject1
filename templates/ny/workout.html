@@ -26,10 +26,45 @@
     <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
 
     <script>
-        function write() {
-            let texts = $('#floatingTextarea2').val();
-            let temp_html = `<li>${texts}</li>`
-            $('#temp-write').append(temp_html)
+        $(document).ready(function () {
+            showgoal()
+        })
+
+        function goal() {
+            let nygoal = $('#nygoal').val()
+
+            $.ajax({
+                type: "POST",
+                url: "/goal",
+                data: {goal_give: nygoal},
+                success: function (response) {
+                    alert(response["msg"]);
+                    window.location.reload();
+                }
+            })
+        }
+
+        function showgoal() {
+            $.ajax({
+                type: "GET",
+                url: "/goal",
+                data: {},
+                success: function (response) {
+                    let goals = response['all_goals']
+                    for (let i = 0; i < goals.length; i++) {
+                        let nygoal = goals[i]['goal']
+                        let temp_html = `<div class="chkbox">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="chkbox">
+                                        <label class="form-check-label" for="chkbox"></label>
+                                    </div>
+                                    <p>${nygoal}</p>
+                                </div>`
+
+                        $('#goalbox').append(temp_html)
+                    }
+                }
+            })
         }
 
         function logout() {
@@ -130,7 +165,8 @@
 </video>
 <div class="workout">
     <h5 class="workout_title">>> 운동 <<</h5>
-    <hr><br>
+    <hr>
+    <br>
     <p>서비스를 전공하다보니 특성(?)상 체중 관리가 필요해서 운동을 꾸준히 한 편이고 다양한 종목에서 운동을 했었어요.
         <br>다행스럽게도 현재까지 힘들어도 운동의 필요성에 대한 생각을 심어주게되어 좋은 습관이라고 생각합니다.
         <br>학생 때는 스피닝이나 댄스와 같이 활동적이고 역동적인 운동을 좋아해서 스피닝같은 경우는 3년정도 배웠어요.
@@ -141,17 +177,11 @@
     <h5 class="workout_title">>> 목표와 성취 <<</h5>
     <hr>
     <div class="form-group">
-        <label for="exampleFormControlTextarea1"></label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        <button type="button" class="btn btn-primary write">작성하기</button>
+        <label for="nygoal"></label>
+        <textarea class="form-control" id="nygoal" rows="3"></textarea>
+        <button type="button" class ="btn btn-primary write" onclick="goal()">작성하기</button>
     </div>
-    <div class="chkbox">
-        <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="chkbox">
-            <label class="form-check-label" for="chkbox"></label>
-        </div>
-        <p>목표를 입력해주세요.</p>
-
+    <div  id="goalbox">
     </div>
 </div>
 

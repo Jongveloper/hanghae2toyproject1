@@ -151,6 +151,18 @@ def nayeong_workout():
 @app.route('/nayeong_travel')
 def nayeong_travel():
     return render_template('ny/travel.html')
+#나영 기록 api
+@app.route('/goal',methods=['POST'])
+def goal_write() :
+    goal = request.form['goal_give']
+    doc = {'goal':goal}
+    db.nygoal.insert_one(doc)
+    return jsonify({'msg': '작성하기 완료!'})
+
+@app.route('/goal',methods=['GET'])
+def goal_view() :
+    goals = list(db.nygoal.find({}, {'_id': False}))
+    return jsonify({'all_goals': goals})
 
 
 if __name__ == '__main__':
