@@ -127,6 +127,15 @@ def view_smemo():
 @app.route('/jonghyuk')
 def jonghyuk():
     return render_template('jh/jonghyuk.html')
+@app.route('/jonghyuk_music')
+def jonghyuk_music():
+    return render_template('jh/music.html')
+@app.route('/jonghyuk_baber')
+def jonghyuk_baber():
+    return render_template('jh/baber.html')
+@app.route('/jonghyuk_coffee')
+def jonghyuk_coffee():
+    return render_template('jh/coffee.html')
 
 #선민님 개인 페이지
 @app.route('/seonmin')
