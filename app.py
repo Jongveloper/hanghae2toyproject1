@@ -132,6 +132,9 @@ def jonghyuk():
 @app.route('/seonmin')
 def seonmin():
     return render_template('sm/seonmin.html')
+@app.route('/baseball')
+def sm_baseball():
+    return render_template('sm/baseball.html')
 
 #재인님 개인 페이지
 @app.route('/jaein')
